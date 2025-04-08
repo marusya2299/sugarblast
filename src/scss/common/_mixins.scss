@@ -1,5 +1,6 @@
 @use 'sass:math';
 @import './breakpoints';
+
 /*
 screen types: 
     mobile,
@@ -8,6 +9,7 @@ screen types:
     to-desktop
     desktop,
 */
+
 @mixin media($_screen) {
   @if $_screen == mobile {
     @media screen and (min-width: $mobile) {
@@ -32,10 +34,18 @@ screen types:
   }
 }
 
-@mixin font($_fsz, $_lnh) {
+/*Міксин для шрифту*/
+@mixin font($_fsz, $_lnh, $_fw: null) {
   font-size: #{$_fsz}px;
+  line-height: math.div(math.round((math.div($_lnh, $_fsz)) * 100), 100);
+  @if $_fw != null {
+    font-weight: $_fw;
+  }
+}
 
-  $result: math.div($_lnh, $_fsz);
-
-  line-height: math.div(math.round($result * 100), 100);
+/*Міксин центрування*/
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

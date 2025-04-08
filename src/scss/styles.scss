@@ -1,18 +1,194 @@
-@import './header.scss';
-@import './vite-promo.scss';
+@import './header-hero.scss';
+@import './game-overview.scss';
+@import './candy-world.scss';
+@import './special-events.scss';
+@import './player-achievements.scss';
+@import './footer.scss';
+@import './features.scss';
+@import './developers-corner.scss';
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
+  color: #000000;
   font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.64px;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-decoration-skip: objects;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+input,
+textarea,
+select,
+button {
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+img,
+picture,
+video,
+audio,
+svg,
+canvas,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+section,
+article,
+aside,
+footer,
+header,
+nav,
+main {
+  display: block;
+}
+
+input,
+textarea,
+select {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+select,
+button,
+input[type='range'],
+input[type='file'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+select:focus,
+button:focus,
+input[type='range']:focus,
+input[type='file']:focus {
+  border-color: #007bff;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+}
+
+button,
+select {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input,
+select,
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: inherit;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
 }
